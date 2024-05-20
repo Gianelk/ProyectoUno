@@ -1,0 +1,2 @@
+public class Cartas {
+}
