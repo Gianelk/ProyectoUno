@@ -8,8 +8,8 @@ public class Mazo extends LinkedList<Carta>{
         this.mazo = mazo;
     }
 
-    public LinkedList<Carta> getMazo() {
-        return mazo;
+    public Mazo() {
+        this.mazo = new LinkedList<Carta>();
     }
 
     public void setMazo(LinkedList<Carta> mazo) {
@@ -35,5 +35,60 @@ public class Mazo extends LinkedList<Carta>{
             System.out.println(mazo.get(i).color);
         }
 
+    }
+    public  void crearCartas() {
+        String numeroCarta;
+        String color;
+        for (int j=0; j<4;j++) {
+            switch (j) {
+                case 0:
+                    color = "azul";
+                    break;
+                case 1:
+                    color ="amarillo";
+                    break;
+                case 2:
+                    color ="rojo";
+                    break;
+                case 3:
+                    color ="verde";
+                    break;
+                default:
+                    throw new IllegalStateException("LOL: " + j);
+            }
+            for (int i = 0; i < 10; i++) {
+                String pasaTurno = Character.toString((char) 169);
+                numeroCarta = String.valueOf(i);
+                Carta carta = new Carta(numeroCarta, color);
+                if (i == 0) {
+                    mazo.add(carta);
+                    carta = new Carta("+2", color);
+                    mazo.add(carta);
+                    mazo.add(carta);
+                    carta = new Carta("<>", color);
+                    mazo.add(carta);
+                    mazo.add(carta);
+                    carta = new Carta(pasaTurno, color);
+                    mazo.add(carta);
+                    mazo.add(carta);
+                } else {
+                    mazo.add(carta);
+                    mazo.add(carta);
+                }
+            }
+        }
+        this.crearCartasComodin();
+    }
+    public void crearCartasComodin() {
+        Carta carta =new Carta("+4","negro");
+        mazo.add(carta);
+        mazo.add(carta);
+        mazo.add(carta);
+        mazo.add(carta);
+        carta=new Carta("#","negro");
+        mazo.add(carta);
+        mazo.add(carta);
+        mazo.add(carta);
+        mazo.add(carta);
     }
 }
