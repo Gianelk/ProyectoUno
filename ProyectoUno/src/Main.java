@@ -22,8 +22,30 @@ public class Main {
             cartas.add(carta);
         }
     }
-}
-    public static void main(String[] args) {
 
+        public static void crearCartasComodin(LinkedList<Carta> cartas) {
+            Carta carta =new Carta("+4","negro");
+            cartas.add(carta);
+            cartas.add(carta);
+            cartas.add(carta);
+            cartas.add(carta);
+            carta=new Carta("#","negro");
+            cartas.add(carta);
+            cartas.add(carta);
+            cartas.add(carta);
+            cartas.add(carta);
+        }
+        public static void main(String[] args) {
+            LinkedList<Carta> cartas = new LinkedList<Carta>();
+            crearCartas("azul",cartas);
+            crearCartas("verde",cartas);
+            crearCartas("rojo",cartas);
+            crearCartas("amarillo",cartas);
+            crearCartasComodin(cartas);
+            Mazo mazo = new Mazo(cartas);
+            mazo.mostrarMiLista();
+            mazo.barajar();
+            mazo.mostrarMiLista();
+        }
     }
 }
