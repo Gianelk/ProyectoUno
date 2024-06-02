@@ -45,7 +45,7 @@ public class Baraja extends LinkedList<Carta>{
             if (posibilidades.contains(i)){
                 if (i==0){
                     System.out.println("\033[00m"+"["+i+"] "+baraja.get(i).numeroCarta);
-                    System.out.println(" "baraja.get(i).color);
+                    System.out.println(" "+baraja.get(i).color);
                 }
                 else{
                     System.out.print("  "+"\033[00m"+"["+i+"] "+baraja.get(i).numeroCarta);
@@ -55,7 +55,7 @@ public class Baraja extends LinkedList<Carta>{
             else{
                 if (i==0){
                     System.out.println("\033[37m"+"["+i+"] "+baraja.get(i).numeroCarta);
-                    System.out.println(" "baraja.get(i).color);
+                    System.out.println(" "+baraja.get(i).color);
                 }
                 else{
                     System.out.print("  "+"\033[37m"+"["+i+"] "+baraja.get(i).numeroCarta);
