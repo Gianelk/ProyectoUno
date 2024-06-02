@@ -29,6 +29,9 @@ public class Mesa extends LinkedList<Carta>{
         return mazoMesa.getFirst();
     }
 
+    public void eliminarCarta(){
+        mazoMesa.removeFirst();
+    }
 
     public void iniciarMesa(Mazo mazo){
         Carta primera;
@@ -41,6 +44,12 @@ public class Mesa extends LinkedList<Carta>{
         mazoMesa.add(primera);
         mazo.eliminarCarta(i);
     }
+
+    public void agregarPrimero( Carta carta) {
+        mazoMesa.add(0,carta);
+        colorMesa= mazoMesa.get(0).color;
+    }
+
     public void mostrarPrimera(){
         System.out.println("La carta que esta en la mesa es:");
         System.out.println(mazoMesa.getFirst().numeroCarta);
