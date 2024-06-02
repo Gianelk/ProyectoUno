@@ -43,16 +43,27 @@ public class Baraja extends LinkedList<Carta>{
         System.out.println();
         for(int  i= 0;i<baraja.size(); i++) {
             if (posibilidades.contains(i)){
-                System.out.println("\033[36m"+""+i);
-                System.out.println(baraja.get(i).numeroCarta);
-                System.out.println(baraja.get(i).color);
+                if (i==0){
+                    System.out.println("\033[00m"+"["+i+"] "+baraja.get(i).numeroCarta);
+                    System.out.println(" "baraja.get(i).color);
+                }
+                else{
+                    System.out.print("  "+"\033[00m"+"["+i+"] "+baraja.get(i).numeroCarta);
+                    System.out.print(baraja.get(i).color);
+                }
             }
             else{
-                System.out.println("\033[37m"+""+i);
-                System.out.println(baraja.get(i).numeroCarta);
-                System.out.println(baraja.get(i).color);
+                if (i==0){
+                    System.out.println("\033[37m"+"["+i+"] "+baraja.get(i).numeroCarta);
+                    System.out.println(" "baraja.get(i).color);
+                }
+                else{
+                    System.out.print("  "+"\033[37m"+"["+i+"] "+baraja.get(i).numeroCarta);
+                    System.out.print(baraja.get(i).color);
+                }
             }
         }
+        System.out.println("\033[00m");
     }
     
     public void jugar(LinkedList<Integer>posibilidades,Mesa mazoMesa){
