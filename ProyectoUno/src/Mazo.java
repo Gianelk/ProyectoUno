@@ -62,13 +62,13 @@ public class Mazo extends LinkedList<Carta>{
                 Carta carta = new Carta(numeroCarta, color);
                 if (i == 0) {
                     mazo.add(carta);
-                    carta = new Carta("+2", color);
+                    carta = new Toma2("+2", color);
                     mazo.add(carta);
                     mazo.add(carta);
-                    carta = new Carta("<>", color);
+                    carta = new Comodin("<>", color);
                     mazo.add(carta);
                     mazo.add(carta);
-                    carta = new Carta(pasaTurno, color);
+                    carta = new Comodin(pasaTurno, color);
                     mazo.add(carta);
                     mazo.add(carta);
                 } else {
@@ -83,12 +83,12 @@ public class Mazo extends LinkedList<Carta>{
         return mazo.get(i);
     }
     public void crearCartasComodin() {
-        Carta carta =new Carta("+4","negro");
+        Carta carta =new Toma4("+4","negro");
         mazo.add(carta);
         mazo.add(carta);
         mazo.add(carta);
         mazo.add(carta);
-        carta=new Carta("#","negro");
+        carta=new Comodin("#","negro");
         mazo.add(carta);
         mazo.add(carta);
         mazo.add(carta);

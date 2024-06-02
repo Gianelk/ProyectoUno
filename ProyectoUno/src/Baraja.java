@@ -78,6 +78,7 @@ public class Baraja extends LinkedList<Carta>{
             if (posibilidades.contains(jugada)) {
                 carta = baraja.get(jugada);
                 mazoMesa.agregarPrimero(carta);
+                mazoMesa.setColorMesa(carta.color);
                 baraja.remove(jugada);
                 i = 1;
             } else {
@@ -122,6 +123,28 @@ public class Baraja extends LinkedList<Carta>{
         else{
             System.out.println("\033[31m"+"No tienes cartas para jugar");
             System.out.println("\033[32m"+"Se te agregara una del mazo");
+            carta=mazo.getPrimeraMazo(0);
+            baraja.add(carta);
+            mazo.eliminarPrimeraCarta();
+        }
+        posibilidades=this.evaluarCarta(mazoMesa);
+        this.mostrarMiBaraja(posibilidades);
+    }
+
+    public void jugadaBot(Mesa mazoMesa,Mazo mazo){
+        Carta carta;
+        LinkedList<Integer>posibilidades= new LinkedList<Integer>();
+        posibilidades=this.evaluarCarta(mazoMesa);
+        if(!posibilidades.isEmpty()){
+            this.mostrarMiBaraja(posibilidades);
+            carta=baraja.get(posibilidades.getFirst());
+            mazoMesa.agregarPrimero(carta);
+            int auxiliar= posibilidades.getFirst();
+            baraja.remove(auxiliar);
+        }
+        else{
+            System.out.println("\033[31m"+"El jugador rival no tiene cartas jugables");
+            System.out.println("\033[32m"+"Se le agregara una del mazo");
             carta=mazo.getPrimeraMazo(0);
             baraja.add(carta);
             mazo.eliminarPrimeraCarta();
