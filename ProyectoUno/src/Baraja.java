@@ -38,5 +38,46 @@ public class Baraja extends LinkedList<Carta>{
         }
 
     }
+    public  void mostrarMiBaraja(LinkedList<Integer> posibilidades) {
+        System.out.println("Tus cartas son: ");
+        System.out.println();
+        for(int  i= 0;i<baraja.size(); i++) {
+            if (posibilidades.contains(i)){
+                System.out.println("\033[36m"+""+i);
+                System.out.println(baraja.get(i).numeroCarta);
+                System.out.println(baraja.get(i).color);
+            }
+            else{
+                System.out.println("\033[37m"+""+i);
+                System.out.println(baraja.get(i).numeroCarta);
+                System.out.println(baraja.get(i).color);
+            }
+        }
+    }
+
+    public void evaluarCarta(Mesa mazoMesa){
+        LinkedList<Integer> posibilidades = new LinkedList<Integer>();
+        String color;
+        String numero;
+        String colorMesa=mazoMesa.getPrimera().color;;
+        String numeroMesa=mazoMesa.getPrimera().numeroCarta;
+        for (int i=0;i<baraja.size();i++){
+            numero = baraja.get(i).numeroCarta;
+            color = baraja.get(i).color;
+            if(color.equals(colorMesa)){
+                posibilidades.add(i);
+            }
+            else
+            {
+                if(numeroMesa.equals(numero)){
+                    posibilidades.add(i);}
+                else{
+                    if(color.equals("negro")){
+                        posibilidades.add(i);}
+                }
+            }
+        }
+        mostrarMiBaraja(posibilidades);
+    }
 
 }
