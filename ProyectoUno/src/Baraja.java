@@ -54,8 +54,28 @@ public class Baraja extends LinkedList<Carta>{
             }
         }
     }
-
-    public void evaluarCarta(Mesa mazoMesa){
+    
+    public void jugar(LinkedList<Integer>posibilidades,Mesa mazoMesa){
+        Scanner leer=new Scanner(System.in);
+        int jugada;
+        Carta carta;
+        int i=0;
+        while(i!= 1) {
+            System.out.println("");
+            System.out.println("Indique el indice de la carta que quiere jugar");
+            jugada = leer.nextInt();
+            if (posibilidades.contains(jugada)) {
+                carta = baraja.get(jugada);
+                mazoMesa.agregarPrimero(carta);
+                baraja.remove(jugada);
+                i = 1;
+            } else {
+                System.out.println("Esta carta no puede ser jugada");
+            }
+        }
+    }
+    
+    public LinkedList<Integer> evaluarCarta(Mesa mazoMesa){
         LinkedList<Integer> posibilidades = new LinkedList<Integer>();
         String color;
         String numero;
@@ -77,7 +97,26 @@ public class Baraja extends LinkedList<Carta>{
                 }
             }
         }
-        mostrarMiBaraja(posibilidades);
+        return posibilidades;
+    }
+    
+    public void jugadaJugador(Mesa mazoMesa,Mazo mazo) {
+        Carta carta;
+        LinkedList<Integer>posibilidades= new LinkedList<Integer>();
+        posibilidades=this.evaluarCarta(mazoMesa);
+        if(!posibilidades.isEmpty()){
+            this.mostrarMiBaraja(posibilidades);
+            this.jugar(posibilidades,mazoMesa);
+        }
+        else{
+            System.out.println("\033[31m"+"No tienes cartas para jugar");
+            System.out.println("\033[32m"+"Se te agregara una del mazo");
+            carta=mazo.getPrimeraMazo(0);
+            baraja.add(carta);
+            mazo.eliminarPrimeraCarta();
+        }
+        posibilidades=this.evaluarCarta(mazoMesa);
+        this.mostrarMiBaraja(posibilidades);
     }
 
 }
