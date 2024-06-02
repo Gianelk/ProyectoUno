@@ -42,16 +42,16 @@ public class Mazo extends LinkedList<Carta>{
         for (int j=0; j<4;j++) {
             switch (j) {
                 case 0:
-                    color = "azul";
+                    color = "B";
                     break;
                 case 1:
-                    color ="amarillo";
+                    color ="Y";
                     break;
                 case 2:
-                    color ="rojo";
+                    color ="R";
                     break;
                 case 3:
-                    color ="verde";
+                    color ="G";
                     break;
                 default:
                     throw new IllegalStateException("LOL: " + j);
@@ -97,8 +97,14 @@ public class Mazo extends LinkedList<Carta>{
     public void agregarCarta(Carta carta){
         mazo.add(carta);
     }
-    public void eliminarUltimaCarta(){
+    public Carta getPrimeraMazo(int i) {
+        return mazo.get(i);
+    }
+    public void eliminarPrimeraCarta(){
         mazo.remove();
+    }
+    public void eliminarCarta(int i){
+        mazo.remove(i);
     }
     public void repartirCartas(Jugadores jugadores){
         Jugador jugador;
