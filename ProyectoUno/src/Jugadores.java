@@ -26,4 +26,12 @@ public class Jugadores extends LinkedList<Jugador>{
         jugadores.add(jugador);
         jugador = new Jugador("Joselito bot");
     }
+    public  void mostrarMiLista() {
+        System.out.println("Los jugadores de la lista son: ");
+        System.out.println();
+        for(int  i= 0;i<jugadores.size(); i++) {
+            System.out.println(jugadores.get(i).nombre);
+        }
+
+    }
 }

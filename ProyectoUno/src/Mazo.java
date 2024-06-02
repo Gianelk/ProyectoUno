@@ -91,4 +91,25 @@ public class Mazo extends LinkedList<Carta>{
         mazo.add(carta);
         mazo.add(carta);
     }
+    public void agregarCarta(Carta carta){
+        mazo.add(carta);
+    }
+    public void eliminarUltimaCarta(){
+        mazo.remove();
+    }
+    public void repartirCartas(Jugadores jugadores){
+        Jugador jugador;
+        Baraja baraja;
+        Carta carta;
+        for (int j=0;j<7;j++) {
+            for (int i = 0; i < 2; i++) {
+                jugador = jugadores.getJugadores(i);
+                baraja = jugador.getCartasDisponibles();
+                carta=mazo.getFirst();
+                baraja.agregarCarta(carta);
+                jugador.setCartasDisponibles(baraja);
+                mazo.remove();
+            }
+        }
+    }
 }
