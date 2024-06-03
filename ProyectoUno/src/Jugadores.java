@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Jugadores extends LinkedList<Jugador>{
 
-    LinkedList<Jugador> jugadores;
+    private LinkedList<Jugador> jugadores;
 
     public LinkedList<Jugador> getJugadores() {
         return jugadores;

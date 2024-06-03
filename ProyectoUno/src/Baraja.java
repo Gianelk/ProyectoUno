@@ -3,7 +3,7 @@ import java.util.LinkedList;
 import java.util.Scanner;
 
 public class Baraja extends LinkedList<Carta>{
-    LinkedList<Carta> baraja;
+    private LinkedList<Carta> baraja;
 
     public Baraja(LinkedList<Carta> baraja) {
 
