@@ -51,8 +51,9 @@ public class Mesa extends LinkedList<Carta>{
     }
 
     public void mostrarPrimera(){
-        System.out.println("La carta que esta en la mesa es:");
-        System.out.println(mazoMesa.getFirst().numeroCarta);
-        System.out.println(mazoMesa.getFirst().color);
+        System.out.println();
+        System.out.print("La carta que esta en la mesa es: ");
+        System.out.print(mazoMesa.getFirst().numeroCarta);
+        System.out.print(mazoMesa.getFirst().color);
     }
 }

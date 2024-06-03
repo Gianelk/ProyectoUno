@@ -52,8 +52,8 @@ public class Baraja extends LinkedList<Carta>{
         for(int  i= 0;i<baraja.size(); i++) {
             if (posibilidades.contains(i)){
                 if (i==0){
-                    System.out.println("\033[00m"+"["+i+"] "+baraja.get(i).numeroCarta);
-                    System.out.println(" "+baraja.get(i).color);
+                    System.out.print("\033[00m"+"["+i+"] "+baraja.get(i).numeroCarta);
+                    System.out.print(" "+baraja.get(i).color);
                 }
                 else{
                     System.out.print("  "+"\033[00m"+"["+i+"] "+baraja.get(i).numeroCarta);
@@ -62,8 +62,8 @@ public class Baraja extends LinkedList<Carta>{
             }
             else{
                 if (i==0){
-                    System.out.println("\033[37m"+"["+i+"] "+baraja.get(i).numeroCarta);
-                    System.out.println(" "+baraja.get(i).color);
+                    System.out.print("\033[37m"+"["+i+"] "+baraja.get(i).numeroCarta);
+                    System.out.print(" "+baraja.get(i).color);
                 }
                 else{
                     System.out.print("  "+"\033[37m"+"["+i+"] "+baraja.get(i).numeroCarta);
@@ -130,13 +130,11 @@ public class Baraja extends LinkedList<Carta>{
         }
         else{
             System.out.println("\033[31m"+"No tienes cartas para jugar");
-            System.out.println("\033[32m"+"Se te agregara una del mazo");
+            System.out.println("\033[32m"+"Se te agregara una del mazo"+"\033[00m");
             carta=mazo.getPrimeraMazo(0);
             baraja.add(carta);
             mazo.eliminarPrimeraCarta();
         }
-        posibilidades=this.evaluarCarta(mazoMesa);
-        this.mostrarMiBaraja(posibilidades);
     }
 
     public void jugadaBot(Mesa mazoMesa,Mazo mazo){
@@ -152,7 +150,7 @@ public class Baraja extends LinkedList<Carta>{
         }
         else{
             System.out.println("\033[31m"+"El jugador rival no tiene cartas jugables");
-            System.out.println("\033[32m"+"Se le agregara una del mazo");
+            System.out.println("\033[32m"+"Se le agregara una del mazo"+"\033[00m");
             carta=mazo.getPrimeraMazo(0);
             baraja.add(carta);
             mazo.eliminarPrimeraCarta();
