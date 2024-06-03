@@ -99,12 +99,11 @@ public class Baraja extends LinkedList<Carta>{
         LinkedList<Integer> posibilidades = new LinkedList<Integer>();
         String color;
         String numero;
-        String colorMesa=mazoMesa.getPrimera().color;;
         String numeroMesa=mazoMesa.getPrimera().numeroCarta;
         for (int i=0;i<baraja.size();i++){
             numero = baraja.get(i).numeroCarta;
             color = baraja.get(i).color;
-            if(color.equals(colorMesa)){
+            if(color.equals(mazoMesa.getColorMesa())){
                 posibilidades.add(i);
             }
             else
@@ -158,5 +157,39 @@ public class Baraja extends LinkedList<Carta>{
         posibilidades=this.evaluarCarta(mazoMesa);
         this.mostrarMiBaraja(posibilidades);
     }
-
+    public String elegirColor(){
+        int R,B,Y,G;
+        R=0;
+        B=0;
+        G=0;
+        Y=0;
+        for (int i=0;i< baraja.size();i++){
+            if(baraja.getFirst().color.equals("R")){
+                R++;
+            }
+            if(baraja.getFirst().color.equals("Y")){
+                Y++;
+            }
+            if(baraja.getFirst().color.equals("G")){
+                G++;
+            }
+            if(baraja.getFirst().color.equals("B")){
+                B++;
+            }
+        }
+        if(R>B && R>Y && R>G){
+            return "R";
+        }
+        else{
+            if (B>Y&&B>G){
+                return "B";
+            }else {
+                if(Y>G){
+                    return "Y";
+                }
+                else{
+                    return "G";
+                }
+            }
+        }
 }
