@@ -12,7 +12,15 @@ public class Baraja extends LinkedList<Carta>{
 
         this.baraja = new LinkedList<Carta>();
     }
-
+    
+    public boolean barajaVacia(){
+        if (baraja.isEmpty()){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
     public LinkedList<Carta> getBaraja() {
 
         return baraja;
