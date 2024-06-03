@@ -79,9 +79,7 @@ public class Mazo extends LinkedList<Carta>{
         }
         this.crearCartasComodin();
     }
-    public Carta getPrimeraMazo(int i) {
-        return mazo.get(i);
-    }
+
     public void crearCartasComodin() {
         Carta carta =new Toma4("+4","negro");
         mazo.add(carta);
