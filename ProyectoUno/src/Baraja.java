@@ -1,5 +1,6 @@
 import java.util.Collection;
 import java.util.LinkedList;
+import java.util.Scanner;
 
 public class Baraja extends LinkedList<Carta>{
     LinkedList<Carta> baraja;
@@ -196,4 +197,5 @@ public class Baraja extends LinkedList<Carta>{
                 }
             }
         }
+    }
 }
