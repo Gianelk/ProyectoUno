@@ -8,7 +8,7 @@ public class Comodin extends Carta{
         Scanner leer=new Scanner(System.in);
         System.out.println("Seleccione el color al que desea cambiar");
         System.out.println(" ");
-        System.out.println("[0]"+"\033[30m"+"Rojo"+"\033[00m"+" [1]"+"\033[34m"+"Azul"+"\033[00m"+"\033[00m"+" [2]"+"\033[33m"+"Amarillo"+"\033[00m"+" [3]"+"\033[32m"+"Verde");
+        System.out.println("[0]" + "\033[31m" + "Rojo" + "\033[00m" + " [1]" + "\033[34m" + "Azul" + "\033[00m" + "\033[00m" + " [2]" + "\033[33m" + "Amarillo" + "\033[00m" + " [3]" + "\033[32m" + "Verde"+"\033[00m");
         int i = leer.nextInt();
         switch(i) {
             case 0:
