@@ -14,7 +14,13 @@ public class Jugadores extends LinkedList<Jugador>{
     }
 
     public Jugadores() {
+        this.jugadores= new LinkedList<Jugador>();
     }
+
+    public Jugador getJugadores(int j){
+        return jugadores.get(j);
+    }
+
     public Jugadores(LinkedList<Jugador> jugadores) {
         this.jugadores = jugadores;
     }

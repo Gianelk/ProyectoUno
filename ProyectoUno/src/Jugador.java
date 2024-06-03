@@ -1,11 +1,17 @@
 public class Jugador {
     String nombre;
-    Mazo cartasDisponlibles;
+    Baraja cartasDisponibles;
 
-    public Jugador(String nombre, Mazo cartasDisponlibles) {
+    public Jugador(String nombre, Baraja cartasDisponibles) {
         this.nombre = nombre;
-        this.cartasDisponlibles = cartasDisponlibles;
+        this.cartasDisponibles = cartasDisponibles;
     }
+
+    public Jugador(String nombre) {
+        this.nombre = nombre;
+        this.cartasDisponibles= new Baraja();
+    }
+
 
     public String getNombre() {
         return nombre;
@@ -15,11 +21,11 @@ public class Jugador {
         this.nombre = nombre;
     }
 
-    public Mazo getCartasDisponlibles() {
-        return cartasDisponlibles;
+    public Baraja getCartasDisponibles() {
+        return cartasDisponibles;
     }
 
-    public void setCartasDisponlibles(Mazo cartasDisponlibles) {
-        this.cartasDisponlibles = cartasDisponlibles;
+    public void setCartasDisponibles(Baraja cartasDisponibles) {
+        this.cartasDisponibles = cartasDisponibles;
     }
 }
