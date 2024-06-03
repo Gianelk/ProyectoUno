@@ -157,6 +157,10 @@ public class Baraja extends LinkedList<Carta>{
         posibilidades=this.evaluarCarta(mazoMesa);
         this.mostrarMiBaraja(posibilidades);
     }
+    public int tamanobaraja(){
+        return baraja.size();
+    }
+    
     public String elegirColor(){
         int R,B,Y,G;
         R=0;

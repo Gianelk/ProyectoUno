@@ -33,6 +33,13 @@ public class Mesa extends LinkedList<Carta>{
         mazoMesa.removeFirst();
     }
 
+    public Toma2 getToma2(){
+        return (Toma2) mazoMesa.getFirst();
+    }
+    public Toma4 getToma4(){
+        return (Toma4) mazoMesa.getFirst();
+    }
+
     public void iniciarMesa(Mazo mazo){
         Carta primera;
         int i =0;
