@@ -1,16 +1,18 @@
+
 import java.util.Scanner;
 
-public class Comodin extends Carta{
+public class Comodin extends Carta {
     public Comodin(String numeroCarta, String color) {
         super(numeroCarta, color);
     }
-    public void cambiaColor(Mesa mazoMesa){
-        Scanner leer=new Scanner(System.in);
+
+    public void cambiaColor(Mesa mazoMesa) {
+        Scanner leer = new Scanner(System.in);
         System.out.println("Seleccione el color al que desea cambiar");
         System.out.println(" ");
         System.out.println("[0]" + "\033[31m" + "Rojo" + "\033[00m" + " [1]" + "\033[34m" + "Azul" + "\033[00m" + "\033[00m" + " [2]" + "\033[33m" + "Amarillo" + "\033[00m" + " [3]" + "\033[32m" + "Verde"+"\033[00m");
         int i = leer.nextInt();
-        switch(i) {
+        switch (i) {
             case 0:
                 mazoMesa.setColorMesa("R");
                 break;
@@ -26,6 +28,6 @@ public class Comodin extends Carta{
                 break;
             default:
                 throw new IllegalStateException("LOL: " + i);
+
         }
-    }
-}
+    }}

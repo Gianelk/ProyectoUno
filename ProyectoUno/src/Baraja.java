@@ -1,6 +1,6 @@
-import java.util.Collection;
 import java.util.LinkedList;
 import java.util.Scanner;
+import java.util.List;
 
 public class Baraja extends LinkedList<Carta>{
     private LinkedList<Carta> baraja;
@@ -13,7 +13,14 @@ public class Baraja extends LinkedList<Carta>{
 
         this.baraja = new LinkedList<Carta>();
     }
-    
+
+
+
+    public LinkedList<Carta> getBaraja() {
+
+        return baraja;
+    }
+
     public boolean barajaVacia(){
         if (baraja.isEmpty()){
             return true;
@@ -21,10 +28,6 @@ public class Baraja extends LinkedList<Carta>{
         else{
             return false;
         }
-    }
-    public LinkedList<Carta> getBaraja() {
-
-        return baraja;
     }
 
     public void setBaraja(LinkedList<Carta> baraja) {
@@ -34,6 +37,7 @@ public class Baraja extends LinkedList<Carta>{
     public void agregarCarta(Carta carta){
         baraja.add(carta);
     }
+
     public void eliminarUltimaCarta(){
         baraja.remove();
     }
@@ -45,7 +49,6 @@ public class Baraja extends LinkedList<Carta>{
             System.out.println(baraja.get(i).numeroCarta);
             System.out.println(baraja.get(i).color);
         }
-
     }
     public  void mostrarMiBaraja(LinkedList<Integer> posibilidades) {
         System.out.println("Tus cartas son: ");
@@ -54,7 +57,7 @@ public class Baraja extends LinkedList<Carta>{
             if (posibilidades.contains(i)){
                 if (i==0){
                     System.out.print("\033[00m"+"["+i+"] "+baraja.get(i).numeroCarta);
-                    System.out.print(" "+baraja.get(i).color);
+                    System.out.print(baraja.get(i).color);
                 }
                 else{
                     System.out.print("  "+"\033[00m"+"["+i+"] "+baraja.get(i).numeroCarta);
@@ -64,7 +67,7 @@ public class Baraja extends LinkedList<Carta>{
             else{
                 if (i==0){
                     System.out.print("\033[37m"+"["+i+"] "+baraja.get(i).numeroCarta);
-                    System.out.print(" "+baraja.get(i).color);
+                    System.out.print(baraja.get(i).color);
                 }
                 else{
                     System.out.print("  "+"\033[37m"+"["+i+"] "+baraja.get(i).numeroCarta);
@@ -74,14 +77,14 @@ public class Baraja extends LinkedList<Carta>{
         }
         System.out.println("\033[00m");
     }
-    
+
     public void jugar(LinkedList<Integer>posibilidades,Mesa mazoMesa){
         Scanner leer=new Scanner(System.in);
         int jugada;
         Carta carta;
         int i=0;
         while(i!= 1) {
-            System.out.println("");
+            System.out.println(" ");
             System.out.println("Indique el indice de la carta que quiere jugar");
             jugada = leer.nextInt();
             if (posibilidades.contains(jugada)) {
@@ -95,11 +98,12 @@ public class Baraja extends LinkedList<Carta>{
             }
         }
     }
-    
+
     public LinkedList<Integer> evaluarCarta(Mesa mazoMesa){
         LinkedList<Integer> posibilidades = new LinkedList<Integer>();
         String color;
         String numero;
+        Carta carta;
         String numeroMesa=mazoMesa.getPrimera().numeroCarta;
         for (int i=0;i<baraja.size();i++){
             numero = baraja.get(i).numeroCarta;
@@ -119,7 +123,7 @@ public class Baraja extends LinkedList<Carta>{
         }
         return posibilidades;
     }
-    
+
     public void jugadaJugador(Mesa mazoMesa,Mazo mazo) {
         Carta carta;
         LinkedList<Integer>posibilidades= new LinkedList<Integer>();
@@ -142,7 +146,6 @@ public class Baraja extends LinkedList<Carta>{
         LinkedList<Integer>posibilidades= new LinkedList<Integer>();
         posibilidades=this.evaluarCarta(mazoMesa);
         if(!posibilidades.isEmpty()){
-            this.mostrarMiBaraja(posibilidades);
             carta=baraja.get(posibilidades.getFirst());
             mazoMesa.agregarPrimero(carta);
             int auxiliar= posibilidades.getFirst();
@@ -155,13 +158,10 @@ public class Baraja extends LinkedList<Carta>{
             baraja.add(carta);
             mazo.eliminarPrimeraCarta();
         }
-        posibilidades=this.evaluarCarta(mazoMesa);
-        this.mostrarMiBaraja(posibilidades);
     }
     public int tamanobaraja(){
         return baraja.size();
     }
-    
     public String elegirColor(){
         int R,B,Y,G;
         R=0;

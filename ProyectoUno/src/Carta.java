@@ -7,6 +7,7 @@ public class Carta {
         this.color = color;
     }
 
+
     public Carta() {
     }
 
