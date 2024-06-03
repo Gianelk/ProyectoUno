@@ -29,8 +29,8 @@ public class Mesa extends LinkedList<Carta>{
         return mazoMesa.getFirst();
     }
 
-    public void eliminarCarta(){
-        mazoMesa.removeFirst();
+    public Comodin getComodin(){
+        return (Comodin) mazoMesa.getFirst();
     }
 
     public Toma2 getToma2(){
@@ -38,6 +38,9 @@ public class Mesa extends LinkedList<Carta>{
     }
     public Toma4 getToma4(){
         return (Toma4) mazoMesa.getFirst();
+    }
+    public void eliminarCarta(){
+        mazoMesa.removeFirst();
     }
 
     public void iniciarMesa(Mazo mazo){
@@ -51,11 +54,6 @@ public class Mesa extends LinkedList<Carta>{
         mazoMesa.add(primera);
         mazo.eliminarCarta(i);
     }
-
-    public Comodin getComodin(){
-        return (Comodin) mazoMesa.getFirst();
-    }
-
     public int  evaluarMesa(){
         if(this.colorMesa.equals("negro")){
             return 1;
@@ -75,5 +73,8 @@ public class Mesa extends LinkedList<Carta>{
         System.out.print("La carta que esta en la mesa es: ");
         System.out.print(mazoMesa.getFirst().numeroCarta);
         System.out.print(mazoMesa.getFirst().color);
+        System.out.println(" ");
     }
+
+
 }
