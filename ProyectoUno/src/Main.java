@@ -1,3 +1,9 @@
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.LinkedList;
 import java.util.Scanner;
 
@@ -22,6 +28,12 @@ public class Main {
         String uno;
         jugadorJugando = jugadores.getJugadores(0);
         mazoMesa.setColorMesa(mazoMesa.getPrimera().color);
+        LinkedList<Carta> barajaJugador;
+        barajaJugador=jugadores.getJugadores(0).getCartasDisponibles().getBaraja();
+        LinkedList<Carta> barajaBot;
+        barajaBot=jugadores.getJugadores(1).getCartasDisponibles().getBaraja();
+        String nombreJugador;
+        nombreJugador= jugadorJugando.getNombre();
         Scanner leer = new Scanner(System.in);
         int j=1;
         int i = -111;
@@ -113,7 +125,9 @@ public class Main {
                     jugadorJugando = jugadores.getJugadores(0);
                     baraja = jugadorJugando.getCartasDisponibles();
                 }
+
             }
+            guardarPartida(barajaJugador,barajaBot,mazoMesa.getMazoMesa(),mazo.getMazo(),nombreJugador);
         }
         if (!jugadorJugando.nombre.equals("Joselito bot")){
             System.out.println("\033[33m"+"Joselito bot HA SIDO EL GANADOR"+"\033[00m");
@@ -123,8 +137,54 @@ public class Main {
         }
     }
 
+    public static void guardarPartida(LinkedList<Carta> barajaJugador,LinkedList<Carta> barajaBot, LinkedList<Carta> mazoMesa, LinkedList<Carta> mazo, String nombreJugador){
+        GuardarDatos guardarDatos= new GuardarDatos();
+        guardarDatos.setBarajaJugador(barajaJugador);
+        guardarDatos.setBarajaBot(barajaBot);
+        guardarDatos.setMazoMesa(mazoMesa);
+        guardarDatos.setMazo(mazo);
+        guardarDatos.setNombreJugador(nombreJugador);
+        escribirJson(guardarDatos,"guardarPartida.json"); // Se guardará de una vez en la carpeta donde está el programa
+    }
+
+    public static void escribirJson(GuardarDatos datos, String rutaArchivo) {
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        try (FileWriter writer = new FileWriter(rutaArchivo)) {
+            gson.toJson(datos, writer);
+            System.out.println("Archivo JSON actualizado: " + rutaArchivo);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void leerJsonYActualizar(String rutaArchivo, LinkedList<Carta> barajaJugador, LinkedList<Carta> barajaBot, LinkedList<Carta> mazoMesa, LinkedList<Carta> mazo, String nombreJugador) {
+        Gson gson = new Gson();
+        try (FileReader reader = new FileReader(rutaArchivo)) {
+            GuardarDatos datos = gson.fromJson(reader, GuardarDatos.class);
+
+            barajaJugador.clear();
+            barajaJugador.addAll(datos.getBarajaJugador());
+
+            barajaBot.clear();
+            barajaBot.addAll(datos.getBarajaBot());
+
+            mazoMesa.clear();
+            mazoMesa.addAll(datos.getMazoMesa());
+
+            mazo.clear();
+            mazo.addAll(datos.getMazo());
+
+            nombreJugador = datos.getNombreJugador();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void main(String[] args) {
         int terminar = -111;
+        Mazo mazo = new Mazo();
+        Jugadores jugadores = new Jugadores();
+        Mesa mesa = new Mesa();
         while(terminar != 0) {
             Scanner scanner = new Scanner(System.in);
             System.out.println(" _________________________________________________________");
@@ -162,18 +222,26 @@ public class Main {
                     terminar = 0;
                     break;
                 case 1:
-                    Mazo mazo = new Mazo();
                     mazo.crearCartas();
                     mazo.barajar();
-                    Jugadores jugadores = new Jugadores();
                     jugadores.crearJugador();
                     mazo.repartirCartas(jugadores);
-                    Mesa mesa = new Mesa();
                     mesa.iniciarMesa(mazo);
                     turno(jugadores,mazo,mesa);
                     break;
                 case 2:
-
+                    LinkedList<Carta> barajaJugador=new LinkedList<>();
+                    LinkedList<Carta> barajaBot=new LinkedList<>();
+                    LinkedList<Carta> mazoMesaLeer=new LinkedList<>();
+                    LinkedList<Carta> mazoLeer=new LinkedList<>();
+                    String nombreJugador="";
+                    leerJsonYActualizar("guardarPartida.json",barajaJugador,barajaBot,mazoMesaLeer,mazoLeer,nombreJugador);
+                    jugadores.crearJugadorLeer(nombreJugador);
+                    jugadores.getJugadores(0).getCartasDisponibles().setBaraja(barajaJugador);
+                    jugadores.getJugadores(1).getCartasDisponibles().setBaraja(barajaBot);
+                    mesa.setMazoMesa(mazoMesaLeer);
+                    mazo.setMazo(mazoLeer);
+                    turno(jugadores,mazo,mesa);
                     break;
                 case 3:
                     break;

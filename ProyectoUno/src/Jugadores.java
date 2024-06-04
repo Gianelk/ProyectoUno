@@ -22,6 +22,7 @@ public class Jugadores extends LinkedList<Jugador>{
     public Jugador getJugadores(int j){
         return jugadores.get(j);
     }
+
     public void crearJugador(){
         Scanner leer = new Scanner(System.in);
         System.out.println("Ingrese el nombre del jugador");
@@ -37,6 +38,12 @@ public class Jugadores extends LinkedList<Jugador>{
         for(int  i= 0;i<jugadores.size(); i++) {
             System.out.println(jugadores.get(i).nombre);
         }
+    }
+    public void crearJugadorLeer(String nombreJugador){
+        Jugador jugador = new Jugador(nombreJugador);
+        jugadores.add(jugador);
+        jugador = new Jugador("Joselito bot");
+        jugadores.add(jugador);
     }
 
 }
