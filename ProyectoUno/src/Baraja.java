@@ -14,8 +14,6 @@ public class Baraja extends LinkedList<Carta>{
         this.baraja = new LinkedList<Carta>();
     }
 
-
-
     public LinkedList<Carta> getBaraja() {
 
         return baraja;
@@ -51,7 +49,7 @@ public class Baraja extends LinkedList<Carta>{
         }
     }
     public  void mostrarMiBaraja(LinkedList<Integer> posibilidades) {
-        System.out.println("Tus cartas son: ");
+        System.out.println("                  Tus cartas son: ");
         System.out.println();
         for(int  i= 0;i<baraja.size(); i++) {
             if (posibilidades.contains(i)){
@@ -98,6 +96,18 @@ public class Baraja extends LinkedList<Carta>{
             }
         }
     }
+    public void imprimirBot(){
+        String carta=Character.toString((char) 219);
+        System.out.println("|----------------------------------------------------|");
+        System.out.println("                   Cartas del bot        ");
+        System.out.println();
+        System.out.print("                ");
+        for (int i=0;i<baraja.size();i++) {
+            System.out.print(carta+"  ");
+        }
+        System.out.print("     ["+"\033[33m"+baraja.size()+"\033[00m"+"]");
+        System.out.println(" ");
+    }
 
     public LinkedList<Integer> evaluarCarta(Mesa mazoMesa){
         LinkedList<Integer> posibilidades = new LinkedList<Integer>();
@@ -124,17 +134,17 @@ public class Baraja extends LinkedList<Carta>{
         return posibilidades;
     }
 
-    public void jugadaJugador(Mesa mazoMesa,Mazo mazo) {
+    public void jugadaJugador(Mesa mazoMesa,Mazo mazo,String nombreJugador) {
         Carta carta;
         LinkedList<Integer>posibilidades= new LinkedList<Integer>();
         posibilidades=this.evaluarCarta(mazoMesa);
         if(!posibilidades.isEmpty()){
-            this.mostrarMiBaraja(posibilidades);
+            System.out.println("\033[00m"+"                   Turno: "+"\033[35m"+nombreJugador+"\033[00m");
             this.jugar(posibilidades,mazoMesa);
         }
         else{
-            System.out.println("\033[31m"+"No tienes cartas para jugar");
-            System.out.println("\033[32m"+"Se te agregara una del mazo"+"\033[00m");
+            System.out.println("\033[00m"+"          Turno: "+"\033[31m"+"No tienes cartas para jugar");
+            System.out.println("\033[32m"+"              Se te agregara una del mazo"+"\033[00m");
             carta=mazo.getPrimeraMazo(0);
             baraja.add(carta);
             mazo.eliminarPrimeraCarta();
@@ -150,10 +160,12 @@ public class Baraja extends LinkedList<Carta>{
             mazoMesa.agregarPrimero(carta);
             int auxiliar= posibilidades.getFirst();
             baraja.remove(auxiliar);
+            System.out.println("\033[00m"+"                   Turno: "+"\033[35m"+"Joselito bot"+"\033[00m");
+            System.out.println();
         }
         else{
-            System.out.println("\033[31m"+"El jugador rival no tiene cartas jugables");
-            System.out.println("\033[32m"+"Se le agregara una del mazo"+"\033[00m");
+            System.out.println("\033[31m"+"        El jugador rival no tiene cartas jugables");
+            System.out.println("\033[32m"+"               Se le agregara una del mazo"+"\033[00m");
             carta=mazo.getPrimeraMazo(0);
             baraja.add(carta);
             mazo.eliminarPrimeraCarta();
