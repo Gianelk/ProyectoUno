@@ -179,6 +179,42 @@ public class Main {
             e.printStackTrace();
         }
     }
+    public static LinkedList<Carta> polimorfismo(LinkedList<Carta> baraja){
+        Carta carta;
+        String numero;
+        for(int i=0;i<baraja.size();i++){
+            carta=baraja.get(i);
+            numero= carta.numeroCarta;
+                switch (numero) {
+                    case "+2":
+                        Carta cartaNueva2 = new Toma2(numero, carta.color);
+                        baraja.remove(i);
+                        baraja.add(i, cartaNueva2);
+                        break;
+                    case "+4":
+                        Carta cartaNueva4 = new Toma4(numero, carta.color);
+                        baraja.remove(i);
+                        baraja.add(i, cartaNueva4);
+                        break;
+                    case "#":
+                        Carta cartaNuevaCambiaColor = new Comodin(numero, carta.color);
+                        baraja.remove(i);
+                        baraja.add(i, cartaNuevaCambiaColor);
+                        break;
+                    case "<>":
+                        Carta cartaNuevaCambiaSentido = new Comodin(numero, carta.color);
+                        baraja.remove(i);
+                        baraja.add(i, cartaNuevaCambiaSentido);
+                        break;
+                    case "©":
+                        Carta cartaNuevaPasaTurno = new Comodin(numero, carta.color);
+                        baraja.remove(i);
+                        baraja.add(i, cartaNuevaPasaTurno);
+                        break;
+                }
+        }
+        return baraja;
+    }
 
     public static void main(String[] args) {
         int terminar = -111;
@@ -237,8 +273,12 @@ public class Main {
                     String nombreJugador="";
                     leerJsonYActualizar("guardarPartida.json",barajaJugador,barajaBot,mazoMesaLeer,mazoLeer,nombreJugador);
                     jugadores.crearJugadorLeer(nombreJugador);
+                    barajaJugador=polimorfismo(barajaJugador);
+                    barajaBot=polimorfismo(barajaBot);
                     jugadores.getJugadores(0).getCartasDisponibles().setBaraja(barajaJugador);
                     jugadores.getJugadores(1).getCartasDisponibles().setBaraja(barajaBot);
+                    mazoLeer=polimorfismo(mazoLeer);
+                    mazoMesaLeer=polimorfismo(mazoMesaLeer);
                     mesa.setMazoMesa(mazoMesaLeer);
                     mazo.setMazo(mazoLeer);
                     turno(jugadores,mazo,mesa);
