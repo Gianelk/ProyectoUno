@@ -38,11 +38,16 @@ public class Main {
         int j=1;
         int i = -111;
         int barajaTamano;
+        guardarPartida(barajaJugador,barajaBot,mazoMesa.getMazoMesa(),mazo.getMazo(),nombreJugador);
         while (i != 0) {
             imprimir(jugadores,mazo,mazoMesa);
             if (!(jugadorJugando.nombre.equals("Joselito bot"))) {
                 barajaTamano=baraja.tamanobaraja();
                 baraja.jugadaJugador(mazoMesa, mazo,jugadorJugando.nombre);
+                    if(barajaTamano==baraja.tamanobaraja()){
+                    return;
+                    }
+
                 if(barajaTamano>baraja.tamanobaraja()){
                     j=1;
                 }
@@ -125,8 +130,10 @@ public class Main {
                     jugadorJugando = jugadores.getJugadores(0);
                     baraja = jugadorJugando.getCartasDisponibles();
                 }
-
             }
+             if(mazo.getMazo().size()<5){
+                 mazo.rellenarMazo(mazoMesa);
+             }
             guardarPartida(barajaJugador,barajaBot,mazoMesa.getMazoMesa(),mazo.getMazo(),nombreJugador);
         }
         if (!jugadorJugando.nombre.equals("Joselito bot")){

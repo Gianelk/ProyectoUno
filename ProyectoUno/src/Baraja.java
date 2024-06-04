@@ -83,8 +83,11 @@ public class Baraja extends LinkedList<Carta>{
         int i=0;
         while(i!= 1) {
             System.out.println(" ");
-            System.out.println("Indique el indice de la carta que quiere jugar");
+            System.out.println("Indique el indice de la carta que quiere jugar (Indique [-1] para salir)");
             jugada = leer.nextInt();
+            if(jugada==-1){
+                break;
+            }
             if (posibilidades.contains(jugada)) {
                 carta = baraja.get(jugada);
                 mazoMesa.agregarPrimero(carta);
@@ -138,6 +141,7 @@ public class Baraja extends LinkedList<Carta>{
         Carta carta;
         LinkedList<Integer>posibilidades= new LinkedList<Integer>();
         posibilidades=this.evaluarCarta(mazoMesa);
+        int tamano=baraja.size();
         if(!posibilidades.isEmpty()){
             System.out.println("\033[00m"+"                   Turno: "+"\033[35m"+nombreJugador+"\033[00m");
             this.jugar(posibilidades,mazoMesa);

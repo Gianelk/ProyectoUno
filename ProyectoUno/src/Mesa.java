@@ -72,7 +72,8 @@ public class Mesa extends LinkedList<Carta>{
         System.out.println();
         System.out.print("La carta que esta en la mesa es: ");
         System.out.print(mazoMesa.getFirst().numeroCarta);
-        System.out.print(mazoMesa.getFirst().color);
+        System.out.println(mazoMesa.getFirst().color);
+        System.out.println("El color de la mesa es:"+colorMesa);
         System.out.println(" ");
     }
 

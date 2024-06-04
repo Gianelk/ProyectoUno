@@ -106,6 +106,17 @@ public class Mazo extends LinkedList<Carta>{
     public void agregarCarta(Carta carta){
         mazo.add(carta);
     }
+    public void rellenarMazo(Mesa mazoMesa){
+           LinkedList<Carta> cartasMesa;
+           Carta carta;
+           cartasMesa=mazoMesa.getMazoMesa();
+           int tamano = cartasMesa.size();
+           for(int i=1;i<tamano;i++){
+               carta= cartasMesa.get(1);
+               mazo.add(carta);
+               cartasMesa.remove(1);
+           }
+    }
     public void eliminarPrimeraCarta(){
         mazo.remove();
     }

@@ -1,321 +1,297 @@
 {
   "barajaJugador": [
     {
-      "numeroCarta": "\u003c\u003e",
-      "color": "R"
+      "numeroCarta": "+2",
+      "color": "B"
     },
     {
-      "numeroCarta": "\u003c\u003e",
-      "color": "R"
-    },
-    {
-      "numeroCarta": "7",
-      "color": "Y"
+      "numeroCarta": "©",
+      "color": "B"
     },
     {
       "numeroCarta": "7",
-      "color": "R"
+      "color": "G"
     },
     {
       "numeroCarta": "1",
+      "color": "B"
+    },
+    {
+      "numeroCarta": "6",
+      "color": "G"
+    },
+    {
+      "numeroCarta": "2",
+      "color": "G"
+    },
+    {
+      "numeroCarta": "7",
       "color": "Y"
+    },
+    {
+      "numeroCarta": "0",
+      "color": "Y"
+    },
+    {
+      "numeroCarta": "2",
+      "color": "B"
     }
   ],
   "barajaBot": [
     {
-      "numeroCarta": "7",
-      "color": "G"
+      "numeroCarta": "\u003c\u003e",
+      "color": "B"
     },
     {
-      "numeroCarta": "+2",
-      "color": "R"
-    },
-    {
-      "numeroCarta": "4",
-      "color": "R"
-    },
-    {
-      "numeroCarta": "5",
+      "numeroCarta": "9",
       "color": "Y"
     },
     {
-      "numeroCarta": "+4",
-      "color": "negro"
+      "numeroCarta": "8",
+      "color": "Y"
+    },
+    {
+      "numeroCarta": "1",
+      "color": "B"
+    },
+    {
+      "numeroCarta": "\u003c\u003e",
+      "color": "G"
     }
   ],
   "mazoMesa": [
     {
-      "numeroCarta": "+2",
-      "color": "R"
-    },
-    {
-      "numeroCarta": "©",
-      "color": "R"
-    },
-    {
-      "numeroCarta": "©",
-      "color": "Y"
-    },
-    {
-      "numeroCarta": "2",
-      "color": "Y"
-    },
-    {
-      "numeroCarta": "9",
-      "color": "Y"
-    },
-    {
-      "numeroCarta": "9",
+      "numeroCarta": "8",
       "color": "G"
     },
     {
-      "numeroCarta": "6",
-      "color": "G"
-    },
-    {
-      "numeroCarta": "6",
-      "color": "B"
-    },
-    {
-      "numeroCarta": "6",
-      "color": "Y"
-    },
-    {
-      "numeroCarta": "+4",
-      "color": "negro"
-    },
-    {
-      "numeroCarta": "\u003c\u003e",
-      "color": "R"
-    },
-    {
       "numeroCarta": "8",
       "color": "R"
-    },
-    {
-      "numeroCarta": "8",
-      "color": "Y"
-    },
-    {
-      "numeroCarta": "6",
-      "color": "Y"
-    },
-    {
-      "numeroCarta": "5",
-      "color": "Y"
-    },
-    {
-      "numeroCarta": "5",
-      "color": "Y"
-    },
-    {
-      "numeroCarta": "8",
-      "color": "Y"
     },
     {
       "numeroCarta": "3",
-      "color": "Y"
-    },
-    {
-      "numeroCarta": "1",
-      "color": "Y"
-    },
-    {
-      "numeroCarta": "4",
-      "color": "Y"
-    },
-    {
-      "numeroCarta": "4",
       "color": "R"
-    },
-    {
-      "numeroCarta": "6",
-      "color": "R"
-    },
-    {
-      "numeroCarta": "7",
-      "color": "R"
-    },
-    {
-      "numeroCarta": "#",
-      "color": "negro"
-    },
-    {
-      "numeroCarta": "©",
-      "color": "B"
-    },
-    {
-      "numeroCarta": "©",
-      "color": "G"
-    },
-    {
-      "numeroCarta": "©",
-      "color": "Y"
-    },
-    {
-      "numeroCarta": "\u003c\u003e",
-      "color": "Y"
-    },
-    {
-      "numeroCarta": "+2",
-      "color": "Y"
-    },
-    {
-      "numeroCarta": "7",
-      "color": "Y"
-    },
-    {
-      "numeroCarta": "\u003c\u003e",
-      "color": "Y"
-    },
-    {
-      "numeroCarta": "+2",
-      "color": "Y"
-    },
-    {
-      "numeroCarta": "+2",
-      "color": "G"
-    },
-    {
-      "numeroCarta": "#",
-      "color": "negro"
-    },
-    {
-      "numeroCarta": "4",
-      "color": "B"
-    },
-    {
-      "numeroCarta": "8",
-      "color": "B"
-    },
-    {
-      "numeroCarta": "1",
-      "color": "B"
-    },
-    {
-      "numeroCarta": "7",
-      "color": "B"
-    },
-    {
-      "numeroCarta": "5",
-      "color": "B"
-    },
-    {
-      "numeroCarta": "4",
-      "color": "B"
-    },
-    {
-      "numeroCarta": "3",
-      "color": "B"
-    },
-    {
-      "numeroCarta": "9",
-      "color": "B"
-    },
-    {
-      "numeroCarta": "0",
-      "color": "B"
-    },
-    {
-      "numeroCarta": "0",
-      "color": "Y"
-    },
-    {
-      "numeroCarta": "2",
-      "color": "Y"
-    },
-    {
-      "numeroCarta": "2",
-      "color": "B"
-    },
-    {
-      "numeroCarta": "©",
-      "color": "B"
-    },
-    {
-      "numeroCarta": "6",
-      "color": "B"
-    },
-    {
-      "numeroCarta": "5",
-      "color": "B"
-    },
-    {
-      "numeroCarta": "5",
-      "color": "G"
-    },
-    {
-      "numeroCarta": "\u003c\u003e",
-      "color": "G"
-    },
-    {
-      "numeroCarta": "\u003c\u003e",
-      "color": "B"
-    },
-    {
-      "numeroCarta": "\u003c\u003e",
-      "color": "B"
-    },
-    {
-      "numeroCarta": "1",
-      "color": "B"
-    },
-    {
-      "numeroCarta": "+2",
-      "color": "B"
-    },
-    {
-      "numeroCarta": "+4",
-      "color": "negro"
-    },
-    {
-      "numeroCarta": "6",
-      "color": "R"
-    },
-    {
-      "numeroCarta": "6",
-      "color": "Y"
-    },
-    {
-      "numeroCarta": "3",
-      "color": "G"
     }
   ],
   "mazo": [
     {
-      "numeroCarta": "+2",
+      "numeroCarta": "4",
       "color": "B"
     },
     {
-      "numeroCarta": "1",
+      "numeroCarta": "3",
       "color": "G"
     },
     {
-      "numeroCarta": "1",
-      "color": "Y"
+      "numeroCarta": "\u003c\u003e",
+      "color": "R"
+    },
+    {
+      "numeroCarta": "9",
+      "color": "B"
+    },
+    {
+      "numeroCarta": "©",
+      "color": "B"
+    },
+    {
+      "numeroCarta": "©",
+      "color": "R"
+    },
+    {
+      "numeroCarta": "9",
+      "color": "G"
+    },
+    {
+      "numeroCarta": "3",
+      "color": "B"
     },
     {
       "numeroCarta": "8",
       "color": "R"
+    },
+    {
+      "numeroCarta": "4",
+      "color": "B"
+    },
+    {
+      "numeroCarta": "5",
+      "color": "R"
+    },
+    {
+      "numeroCarta": "5",
+      "color": "B"
+    },
+    {
+      "numeroCarta": "4",
+      "color": "G"
+    },
+    {
+      "numeroCarta": "9",
+      "color": "R"
+    },
+    {
+      "numeroCarta": "6",
+      "color": "B"
     },
     {
       "numeroCarta": "7",
       "color": "B"
     },
     {
+      "numeroCarta": "+2",
+      "color": "Y"
+    },
+    {
+      "numeroCarta": "2",
+      "color": "G"
+    },
+    {
+      "numeroCarta": "8",
+      "color": "G"
+    },
+    {
       "numeroCarta": "8",
       "color": "B"
+    },
+    {
+      "numeroCarta": "9",
+      "color": "B"
+    },
+    {
+      "numeroCarta": "3",
+      "color": "Y"
+    },
+    {
+      "numeroCarta": "+2",
+      "color": "Y"
+    },
+    {
+      "numeroCarta": "\u003c\u003e",
+      "color": "Y"
+    },
+    {
+      "numeroCarta": "+2",
+      "color": "R"
+    },
+    {
+      "numeroCarta": "#",
+      "color": "negro"
+    },
+    {
+      "numeroCarta": "+4",
+      "color": "negro"
+    },
+    {
+      "numeroCarta": "2",
+      "color": "R"
+    },
+    {
+      "numeroCarta": "©",
+      "color": "Y"
+    },
+    {
+      "numeroCarta": "7",
+      "color": "G"
     },
     {
       "numeroCarta": "0",
       "color": "R"
     },
     {
+      "numeroCarta": "1",
+      "color": "Y"
+    },
+    {
+      "numeroCarta": "2",
+      "color": "Y"
+    },
+    {
+      "numeroCarta": "3",
+      "color": "Y"
+    },
+    {
+      "numeroCarta": "6",
+      "color": "B"
+    },
+    {
+      "numeroCarta": "8",
+      "color": "B"
+    },
+    {
+      "numeroCarta": "4",
+      "color": "G"
+    },
+    {
+      "numeroCarta": "3",
+      "color": "G"
+    },
+    {
+      "numeroCarta": "5",
+      "color": "Y"
+    },
+    {
+      "numeroCarta": "7",
+      "color": "B"
+    },
+    {
       "numeroCarta": "4",
       "color": "Y"
     },
     {
+      "numeroCarta": "#",
+      "color": "negro"
+    },
+    {
+      "numeroCarta": "5",
+      "color": "Y"
+    },
+    {
+      "numeroCarta": "6",
+      "color": "Y"
+    },
+    {
+      "numeroCarta": "8",
+      "color": "Y"
+    },
+    {
       "numeroCarta": "+2",
+      "color": "G"
+    },
+    {
+      "numeroCarta": "6",
+      "color": "G"
+    },
+    {
+      "numeroCarta": "+2",
+      "color": "B"
+    },
+    {
+      "numeroCarta": "0",
+      "color": "B"
+    },
+    {
+      "numeroCarta": "9",
+      "color": "Y"
+    },
+    {
+      "numeroCarta": "+2",
+      "color": "R"
+    },
+    {
+      "numeroCarta": "\u003c\u003e",
+      "color": "R"
+    },
+    {
+      "numeroCarta": "©",
+      "color": "R"
+    },
+    {
+      "numeroCarta": "1",
+      "color": "R"
+    },
+    {
+      "numeroCarta": "1",
       "color": "R"
     },
     {
@@ -323,7 +299,51 @@
       "color": "negro"
     },
     {
-      "numeroCarta": "1",
+      "numeroCarta": "2",
+      "color": "R"
+    },
+    {
+      "numeroCarta": "3",
+      "color": "R"
+    },
+    {
+      "numeroCarta": "5",
+      "color": "G"
+    },
+    {
+      "numeroCarta": "©",
+      "color": "Y"
+    },
+    {
+      "numeroCarta": "2",
+      "color": "Y"
+    },
+    {
+      "numeroCarta": "4",
+      "color": "Y"
+    },
+    {
+      "numeroCarta": "4",
+      "color": "R"
+    },
+    {
+      "numeroCarta": "5",
+      "color": "R"
+    },
+    {
+      "numeroCarta": "5",
+      "color": "B"
+    },
+    {
+      "numeroCarta": "#",
+      "color": "negro"
+    },
+    {
+      "numeroCarta": "6",
+      "color": "R"
+    },
+    {
+      "numeroCarta": "7",
       "color": "R"
     },
     {
@@ -331,39 +351,43 @@
       "color": "R"
     },
     {
-      "numeroCarta": "1",
-      "color": "B"
-    },
-    {
-      "numeroCarta": "2",
+      "numeroCarta": "0",
       "color": "G"
     },
     {
-      "numeroCarta": "3",
+      "numeroCarta": "+2",
+      "color": "G"
+    },
+    {
+      "numeroCarta": "#",
+      "color": "negro"
+    },
+    {
+      "numeroCarta": "7",
+      "color": "R"
+    },
+    {
+      "numeroCarta": "6",
+      "color": "R"
+    },
+    {
+      "numeroCarta": "9",
+      "color": "G"
+    },
+    {
+      "numeroCarta": "6",
       "color": "Y"
     },
     {
-      "numeroCarta": "8",
-      "color": "R"
-    },
-    {
-      "numeroCarta": "0",
-      "color": "R"
+      "numeroCarta": "©",
+      "color": "G"
     },
     {
       "numeroCarta": "+4",
       "color": "negro"
     },
     {
-      "numeroCarta": "+4",
-      "color": "negro"
-    },
-    {
-      "numeroCarta": "6",
-      "color": "G"
-    },
-    {
-      "numeroCarta": "0",
+      "numeroCarta": "©",
       "color": "G"
     },
     {
@@ -371,208 +395,16 @@
       "color": "G"
     },
     {
-      "numeroCarta": "#",
-      "color": "negro"
-    },
-    {
-      "numeroCarta": "9",
-      "color": "R"
-    },
-    {
       "numeroCarta": "\u003c\u003e",
-      "color": "G"
-    },
-    {
-      "numeroCarta": "2",
-      "color": "G"
-    },
-    {
-      "numeroCarta": "1",
-      "color": "G"
-    },
-    {
-      "numeroCarta": "5",
-      "color": "R"
-    },
-    {
-      "numeroCarta": "#",
-      "color": "negro"
-    },
-    {
-      "numeroCarta": "1",
-      "color": "R"
-    },
-    {
-      "numeroCarta": "+2",
-      "color": "B"
-    },
-    {
-      "numeroCarta": "6",
-      "color": "R"
-    },
-    {
-      "numeroCarta": "9",
       "color": "Y"
-    },
-    {
-      "numeroCarta": "8",
-      "color": "G"
-    },
-    {
-      "numeroCarta": "4",
-      "color": "G"
-    },
-    {
-      "numeroCarta": "5",
-      "color": "B"
-    },
-    {
-      "numeroCarta": "9",
-      "color": "Y"
-    },
-    {
-      "numeroCarta": "2",
-      "color": "Y"
-    },
-    {
-      "numeroCarta": "4",
-      "color": "G"
-    },
-    {
-      "numeroCarta": "2",
-      "color": "Y"
-    },
-    {
-      "numeroCarta": "#",
-      "color": "negro"
-    },
-    {
-      "numeroCarta": "3",
-      "color": "B"
-    },
-    {
-      "numeroCarta": "7",
-      "color": "G"
-    },
-    {
-      "numeroCarta": "8",
-      "color": "R"
-    },
-    {
-      "numeroCarta": "7",
-      "color": "R"
-    },
-    {
-      "numeroCarta": "6",
-      "color": "B"
-    },
-    {
-      "numeroCarta": "6",
-      "color": "R"
-    },
-    {
-      "numeroCarta": "7",
-      "color": "Y"
-    },
-    {
-      "numeroCarta": "7",
-      "color": "G"
-    },
-    {
-      "numeroCarta": "5",
-      "color": "G"
-    },
-    {
-      "numeroCarta": "0",
-      "color": "Y"
-    },
-    {
-      "numeroCarta": "©",
-      "color": "G"
-    },
-    {
-      "numeroCarta": "3",
-      "color": "B"
-    },
-    {
-      "numeroCarta": "5",
-      "color": "R"
-    },
-    {
-      "numeroCarta": "7",
-      "color": "B"
-    },
-    {
-      "numeroCarta": "+2",
-      "color": "Y"
-    },
-    {
-      "numeroCarta": "©",
-      "color": "R"
-    },
-    {
-      "numeroCarta": "9",
-      "color": "B"
-    },
-    {
-      "numeroCarta": "5",
-      "color": "R"
-    },
-    {
-      "numeroCarta": "8",
-      "color": "B"
-    },
-    {
-      "numeroCarta": "3",
-      "color": "G"
-    },
-    {
-      "numeroCarta": "2",
-      "color": "R"
-    },
-    {
-      "numeroCarta": "©",
-      "color": "G"
-    },
-    {
-      "numeroCarta": "#",
-      "color": "negro"
-    },
-    {
-      "numeroCarta": "+2",
-      "color": "B"
     },
     {
       "numeroCarta": "\u003c\u003e",
       "color": "B"
     },
     {
-      "numeroCarta": "\u003c\u003e",
-      "color": "G"
-    },
-    {
-      "numeroCarta": "+2",
-      "color": "G"
-    },
-    {
-      "numeroCarta": "3",
-      "color": "G"
-    },
-    {
       "numeroCarta": "7",
       "color": "Y"
-    },
-    {
-      "numeroCarta": "©",
-      "color": "B"
-    },
-    {
-      "numeroCarta": "9",
-      "color": "R"
-    },
-    {
-      "numeroCarta": "1",
-      "color": "B"
     },
     {
       "numeroCarta": "2",
@@ -580,296 +412,32 @@
     },
     {
       "numeroCarta": "1",
-      "color": "R"
-    },
-    {
-      "numeroCarta": "6",
       "color": "Y"
-    },
-    {
-      "numeroCarta": "4",
-      "color": "B"
-    },
-    {
-      "numeroCarta": "©",
-      "color": "B"
-    },
-    {
-      "numeroCarta": "7",
-      "color": "B"
     },
     {
       "numeroCarta": "5",
-      "color": "B"
-    },
-    {
-      "numeroCarta": "8",
-      "color": "Y"
-    },
-    {
-      "numeroCarta": "6",
-      "color": "B"
-    },
-    {
-      "numeroCarta": "8",
-      "color": "B"
-    },
-    {
-      "numeroCarta": "©",
-      "color": "R"
-    },
-    {
-      "numeroCarta": "9",
       "color": "G"
-    },
-    {
-      "numeroCarta": "9",
-      "color": "B"
-    },
-    {
-      "numeroCarta": "8",
-      "color": "G"
-    },
-    {
-      "numeroCarta": "+2",
-      "color": "Y"
-    },
-    {
-      "numeroCarta": "4",
-      "color": "Y"
-    },
-    {
-      "numeroCarta": "2",
-      "color": "G"
-    },
-    {
-      "numeroCarta": "4",
-      "color": "Y"
-    },
-    {
-      "numeroCarta": "\u003c\u003e",
-      "color": "Y"
-    },
-    {
-      "numeroCarta": "3",
-      "color": "Y"
-    },
-    {
-      "numeroCarta": "#",
-      "color": "negro"
-    },
-    {
-      "numeroCarta": "©",
-      "color": "Y"
-    },
-    {
-      "numeroCarta": "8",
-      "color": "Y"
-    },
-    {
-      "numeroCarta": "4",
-      "color": "B"
-    },
-    {
-      "numeroCarta": "3",
-      "color": "B"
     },
     {
       "numeroCarta": "1",
-      "color": "Y"
+      "color": "G"
+    },
+    {
+      "numeroCarta": "\u003c\u003e",
+      "color": "G"
     },
     {
       "numeroCarta": "3",
-      "color": "Y"
+      "color": "B"
     },
     {
       "numeroCarta": "4",
-      "color": "R"
-    },
-    {
-      "numeroCarta": "+2",
-      "color": "G"
-    },
-    {
-      "numeroCarta": "5",
-      "color": "Y"
-    },
-    {
-      "numeroCarta": "0",
-      "color": "G"
-    },
-    {
-      "numeroCarta": "2",
-      "color": "R"
-    },
-    {
-      "numeroCarta": "+2",
-      "color": "R"
-    },
-    {
-      "numeroCarta": "9",
-      "color": "B"
-    },
-    {
-      "numeroCarta": "\u003c\u003e",
-      "color": "B"
-    },
-    {
-      "numeroCarta": "©",
-      "color": "Y"
-    },
-    {
-      "numeroCarta": "9",
-      "color": "Y"
-    },
-    {
-      "numeroCarta": "+4",
-      "color": "negro"
-    },
-    {
-      "numeroCarta": "\u003c\u003e",
-      "color": "Y"
-    },
-    {
-      "numeroCarta": "\u003c\u003e",
-      "color": "R"
-    },
-    {
-      "numeroCarta": "8",
-      "color": "G"
-    },
-    {
-      "numeroCarta": "7",
-      "color": "G"
-    },
-    {
-      "numeroCarta": "2",
-      "color": "R"
-    },
-    {
-      "numeroCarta": "3",
-      "color": "R"
-    },
-    {
-      "numeroCarta": "1",
-      "color": "R"
-    },
-    {
-      "numeroCarta": "5",
-      "color": "G"
-    },
-    {
-      "numeroCarta": "2",
-      "color": "R"
-    },
-    {
-      "numeroCarta": "3",
-      "color": "R"
-    },
-    {
-      "numeroCarta": "2",
-      "color": "G"
-    },
-    {
-      "numeroCarta": "4",
-      "color": "R"
-    },
-    {
-      "numeroCarta": "2",
-      "color": "B"
-    },
-    {
-      "numeroCarta": "©",
-      "color": "R"
-    },
-    {
-      "numeroCarta": "3",
-      "color": "R"
-    },
-    {
-      "numeroCarta": "3",
-      "color": "G"
-    },
-    {
-      "numeroCarta": "6",
-      "color": "G"
-    },
-    {
-      "numeroCarta": "5",
       "color": "R"
     },
     {
       "numeroCarta": "+4",
       "color": "negro"
-    },
-    {
-      "numeroCarta": "3",
-      "color": "R"
-    },
-    {
-      "numeroCarta": "0",
-      "color": "B"
-    },
-    {
-      "numeroCarta": "4",
-      "color": "G"
-    },
-    {
-      "numeroCarta": "9",
-      "color": "G"
-    },
-    {
-      "numeroCarta": "\u003c\u003e",
-      "color": "G"
-    },
-    {
-      "numeroCarta": "7",
-      "color": "R"
-    },
-    {
-      "numeroCarta": "#",
-      "color": "negro"
-    },
-    {
-      "numeroCarta": "9",
-      "color": "R"
-    },
-    {
-      "numeroCarta": "+2",
-      "color": "G"
-    },
-    {
-      "numeroCarta": "©",
-      "color": "G"
-    },
-    {
-      "numeroCarta": "1",
-      "color": "G"
-    },
-    {
-      "numeroCarta": "4",
-      "color": "G"
-    },
-    {
-      "numeroCarta": "2",
-      "color": "B"
-    },
-    {
-      "numeroCarta": "5",
-      "color": "G"
-    },
-    {
-      "numeroCarta": "6",
-      "color": "G"
-    },
-    {
-      "numeroCarta": "8",
-      "color": "G"
-    },
-    {
-      "numeroCarta": "9",
-      "color": "G"
     }
   ],
-  "nombreJugador": ""
+  "nombreJugador": "canino"
 }
