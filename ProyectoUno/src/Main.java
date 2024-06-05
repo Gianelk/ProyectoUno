@@ -247,11 +247,6 @@ public class Main {
             System.out.println("|                                                         |");
             System.out.println("|                   _________________                     |");
             System.out.println("|                  |                 |                    |");
-            System.out.println("|            [3]   |   Informacion   |                    |");
-            System.out.println("|                  |_________________|                    |");
-            System.out.println("|                                                         |");
-            System.out.println("|                   _________________                     |");
-            System.out.println("|                  |                 |                    |");
             System.out.println("|            [0]   |      Salir      |                    |");
             System.out.println("|                  |_________________|                    |");
             System.out.println("|                                                         |");
@@ -289,8 +284,6 @@ public class Main {
                     mesa.setMazoMesa(mazoMesaLeer);
                     mazo.setMazo(mazoLeer);
                     turno(jugadores,mazo,mesa);
-                    break;
-                case 3:
                     break;
                 default:
                     System.out.println("Opcion invalida");
