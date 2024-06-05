@@ -1,18 +1,27 @@
 import java.util.LinkedList;
 import java.util.Random;
+//import java.util.Iterator;
 
 public class Mazo extends LinkedList<Carta>{
+
     LinkedList<Carta> mazo;
 
     public Mazo(LinkedList<Carta> mazo) {
+
         this.mazo = mazo;
     }
-
     public Mazo() {
+
         this.mazo = new LinkedList<Carta>();
     }
 
+    public LinkedList<Carta> getMazo() {
+
+        return mazo;
+    }
+
     public void setMazo(LinkedList<Carta> mazo) {
+
         this.mazo = mazo;
     }
     public void barajar(){
@@ -79,7 +88,6 @@ public class Mazo extends LinkedList<Carta>{
         }
         this.crearCartasComodin();
     }
-
     public void crearCartasComodin() {
         Carta carta =new Toma4("+4","negro");
         mazo.add(carta);
@@ -92,11 +100,11 @@ public class Mazo extends LinkedList<Carta>{
         mazo.add(carta);
         mazo.add(carta);
     }
-    public void agregarCarta(Carta carta){
-        mazo.add(carta);
-    }
     public Carta getPrimeraMazo(int i) {
         return mazo.get(i);
+    }
+    public void agregarCarta(Carta carta){
+        mazo.add(carta);
     }
     public void eliminarPrimeraCarta(){
         mazo.remove();

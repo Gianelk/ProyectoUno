@@ -1,22 +1,24 @@
+import java.util.LinkedList;
 import java.util.Scanner;
+
 public class Main {
-    public static void turno(Jugadores jugadores,Mazo mazo, Mesa mazoMesa){
+    public static void turno(Jugadores jugadores, Mazo mazo, Mesa mazoMesa) {
         Baraja baraja;
-        baraja=jugadores.getJugadores(0).cartasDisponibles;
+        baraja = jugadores.getJugadores(0).cartasDisponibles;
         Jugador jugadorJugando;
         String pasaTurno = Character.toString((char) 169);
         String numero;
         String uno;
-        jugadorJugando=jugadores.getJugadores(0);
+        jugadorJugando = jugadores.getJugadores(0);
         mazoMesa.setColorMesa(mazoMesa.getPrimera().color);
         Scanner leer = new Scanner(System.in);
-        int i=-111;
-        while(i!=0){
+        int i = -111;
+        while (i != 0) {
             mazoMesa.mostrarPrimera();
-            if(!(jugadorJugando.nombre.equals("Joselito bot"))) {
+            if (!(jugadorJugando.nombre.equals("Joselito bot"))) {
                 baraja.jugadaJugador(mazoMesa, mazo);
-                if (baraja.barajaVacia()){
-                    i=0;
+                if (baraja.barajaVacia()) {
+                    i = 0;
                 }
                 if (mazoMesa.evaluarMesa() == 1) {
                     Comodin comodin;
@@ -34,6 +36,7 @@ public class Main {
                         mazo.eliminarPrimeraCarta();
                     }
                 }
+
                 if(mazoMesa.getPrimera().numeroCarta.equals("+2")||mazoMesa.getPrimera().numeroCarta.equals("+4")||mazoMesa.getPrimera().numeroCarta.equals("<>")||mazoMesa.getPrimera().numeroCarta.equals(pasaTurno)){
                     numero = mazoMesa.getPrimera().numeroCarta;
                     switch (numero) {
@@ -50,12 +53,11 @@ public class Main {
                     }
                     System.out.println("El bot pierde el turno");
                 }
-                else {
+                else{
                     jugadorJugando = jugadores.getJugadores(1);
                     baraja = jugadorJugando.getCartasDisponibles();
                 }
-            }
-            else {
+            } else {
                 baraja.jugadaBot(mazoMesa, mazo);
                 if (baraja.barajaVacia()) {
                     i = 0;
@@ -92,16 +94,16 @@ public class Main {
             }
         }
     }
-        public static void main(String[] args) {
-            Mazo mazo = new Mazo();
-            mazo.crearCartas();
-            mazo.barajar();
-            Jugadores jugadores = new Jugadores();
-            jugadores.crearJugador();
-            mazo.repartirCartas(jugadores);
-            Mesa mesa = new Mesa();
-            mesa.iniciarMesa(mazo);
-            turno(jugadores,mazo,mesa);
-        }
-        
+
+    public static void main(String[] args) {
+        Mazo mazo = new Mazo();
+        mazo.crearCartas();
+        mazo.barajar();
+        Jugadores jugadores = new Jugadores();
+        jugadores.crearJugador();
+        mazo.repartirCartas(jugadores);
+        Mesa mesa = new Mesa();
+        mesa.iniciarMesa(mazo);
+        turno(jugadores,mazo,mesa);
     }
+}
