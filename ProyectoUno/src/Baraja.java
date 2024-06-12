@@ -155,7 +155,7 @@ public class Baraja extends LinkedList<Carta>{
         }
     }
 
-    public void jugadaBot(Mesa mazoMesa,Mazo mazo){
+    public void jugadaBot(Mesa mazoMesa,Mazo mazo,int contadorBot){
         Carta carta;
         LinkedList<Integer>posibilidades= new LinkedList<Integer>();
         posibilidades=this.evaluarCarta(mazoMesa);
@@ -173,6 +173,7 @@ public class Baraja extends LinkedList<Carta>{
             carta=mazo.getPrimeraMazo(0);
             baraja.add(carta);
             mazo.eliminarPrimeraCarta();
+            contadorBot=contadorBot+1;
         }
     }
     public int tamanobaraja(){
