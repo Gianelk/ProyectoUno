@@ -36,8 +36,8 @@ public class Mesa extends LinkedList<Carta>{
     public Toma2 getToma2(){
         return (Toma2) mazoMesa.getFirst();
     }
-    public Toma5 getToma5(){
-        return (Toma5) mazoMesa.getFirst();
+    public Toma4 getToma4(){
+        return (Toma4) mazoMesa.getFirst();
     }
     public void eliminarCarta(){
         mazoMesa.removeFirst();

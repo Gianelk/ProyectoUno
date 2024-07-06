@@ -89,7 +89,7 @@ public class Mazo extends LinkedList<Carta>{
         this.crearCartasComodin();
     }
     public void crearCartasComodin() {
-        Carta carta =new Toma5("+5","negro");
+        Carta carta =new Toma4("+4","negro");
         mazo.add(carta);
         mazo.add(carta);
         mazo.add(carta);
